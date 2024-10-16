@@ -33,6 +33,8 @@ Model explainability is important for understanding how the model predicts class
 
 After modifying the pre-trained model, the custom architecture was added for training on the custom dataset. To train the VGG-16 model on the custom dataset, I wrote Python code to split the dataset into training, validation and test set and the split was 80% for training, 10% for validation, and 10% for testing. Each of these sets contains two folders for the respective classes. The modified dataset for training, validation, and testing is available here: https://www.dropbox.com/scl/fo/p703rw9d0qf39nnc6r0ph/APrpq4QP9LZYn3k7i3LIOeo?rlkey=pmiz9tu47m6egslsqkhhstn7a&st=61ibqtqb&dl=0.  The model was trained for 50 epochs, and after each epoch the model was evaluated on the validation set. The final classification report was generated on the test set for performance evaluation. TensorFlow Keras was used for building and training the model. The entire workflow of training is available in the notebook: **"model_trainings/VGG.ipynb"** The weights of the final trained classification model are available here: https://www.dropbox.com/scl/fi/vgeyfztem46m72tsx7nyw/vgg16_model.h5?rlkey=ht9wbl7wceorf6bso7rmn7dk0&st=26p48651&dl=0
 
+## Results and Discussions
+
 ## References
 
 1. Pesce F, Albanese F, Mallardi D, Rossini M, Pasculli G, Suavo-Bulzis P, Granata A, Brunetti A, Cascarano GD, Bevilacqua V, Gesualdo L. Identification of glomerulosclerosis using IBM Watson and shallow neural networks. J Nephrol. 2022 May;35(4):1235-1242. doi: 10.1007/s40620-021-01200-0. Epub 2022 Jan 18. PMID: 35041197; PMCID: PMC8765108.
