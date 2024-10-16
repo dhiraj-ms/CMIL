@@ -65,6 +65,17 @@ Similarly, GradCAM for sclerotic is shown in the plot below. ![Sclerotic GRADCAM
 
 The regions with higher color intensity (moving from purple to yellow/red) indicate areas that the model finds important for its classification decisions. These regions likely contain key features that the model uses to distinguish between the two classes. These heatmaps provide insight into where the model is focusing, but these patterns alone may not be sufficient to fully understand the biological context without medical experts.
 
+**c) VGG-16:** The performance of the VGG-16 model on the test set is in the table below:
+
+| Metric        | Non-Sclerotic | Sclerotic |  Test Accuracy   |
+|---------------|---------------|-----------|------------------|
+| Precision     | 0.98          | 0.95      | 0.9723           |
+| Recall        | 0.99          | 0.90      |                  |
+| F1-Score      | 0.98          | 0.92      |                  |
+
+Among the three models implemented, self-supervised, VAE, and VGG-16, VGG-16 model outperformed the others in terms of overall accuracy. It also gives a good balance between precision and recall for both non-sclerotic and sclerotic. This makes VGG-16 the most reliable model for deployment. In contrast, the other models showed limitations in specific scenarios. The self-supervised neural network have comparatively low precision (0.79) in the sclerotic class, misclassifying non-sclerotic as sclerotic which could lead to diagnosis of non-sclerotic patients. VGG-16 performed well for this task due to its use of pre-trained ImageNet weights on millions of images and these features work well to classify our two classes. VGG-16 model will be an efficient and reliable option for deployment especially in scenarios where simplicity and computational cost are important.
+
+
 ## References
 
 1. Pesce F, Albanese F, Mallardi D, Rossini M, Pasculli G, Suavo-Bulzis P, Granata A, Brunetti A, Cascarano GD, Bevilacqua V, Gesualdo L. Identification of glomerulosclerosis using IBM Watson and shallow neural networks. J Nephrol. 2022 May;35(4):1235-1242. doi: 10.1007/s40620-021-01200-0. Epub 2022 Jan 18. PMID: 35041197; PMCID: PMC8765108.
