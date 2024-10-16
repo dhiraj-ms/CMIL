@@ -59,9 +59,9 @@ Looking at these plots, we can conclude that the self-supervised model trained o
 
 **b) VAE:** After the first phase of training for optimizing the hyperparameters, optimal parameters obatined were 'num_layers': 3, 'filters_0': 39, 'filters_1': 105, 'filters_2': 21, 'activation_function': 'relu'. With these values, when optimal model was obtained 
 
-GradCAM was then applied to visualize the important regions for 10 test images from each class, where the predicted label matched the ground truth. For non-sclerotic class, the visualization below shows which areas of the images contributed most to the model's predictions. ![ Non-Sclerotic GRADCAM Visualization](visualizations/merged_class_0.png)
+GradCAM was then applied to visualize the important regions for 10 test images from each class, where the predicted label matched the ground truth. For non-sclerotic class, the visualization below shows which areas of the images contributed most to the model's predictions. ![ Non-Sclerotic GRADCAM Visualization](visualizations/class_0.png)
 
-Similarly, GradCAM for sclerotic is shown in the plot below. ![Sclerotic GRADCAM Visualization](visualizations/merged_class_1.png)
+Similarly, GradCAM for sclerotic is shown in the plot below. ![Sclerotic GRADCAM Visualization](visualizations/class_1.png)
 
 The regions with higher color intensity (moving from purple to yellow/red) indicate areas that the model finds important for its classification decisions. These regions likely contain key features that the model uses to distinguish between the two classes. These heatmaps provide insight into where the model is focusing, but these patterns alone may not be sufficient to fully understand the biological context without medical experts.
 
