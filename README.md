@@ -25,7 +25,26 @@ All models were trained for 50 epochs. The entire training workflow for both pha
 
 b) VAE
 
-c) VGG-16: VGG-16 is a popular supervised learning for classification task. 
+c) VGG-16: VGG-16 is a popular supervised learning model for classification tasks. In this case, I used pre-trained model weights on the ImageNet dataset. The last layer of the model was removed, and the weights of all the previous layers were frozen, means they were set as untrainable. This allowed the pre-trained model to act as a feature extractor since it had already been trained on a large number of images.
+
+After modifying the model, the following architecture was used for training on the custom dataset:
+python
+model = models.Sequential()
+model.add(base_model)  # Adding the pre-trained VGG-16 model
+model.add(layers.Flatten())  
+model.add(layers.Dense(256, activation='relu'))  
+model.add(layers.Dropout(0.5))  
+model.add(layers.Dense(num_classes, activation='softmax'))
+
+
+The model was compiled with the Adam optimizer:
+python
+model.compile(optimizer=Adam(learning_rate=1e-4),
+              loss='categorical_crossentropy',  
+              metrics=['accuracy'])
+
+
+To train the VGG-16 model on the custom dataset, I wrote Python code to split the dataset into training, validation and test set and the split was 80% for training, 10% for validation, and 10% for testing. Each of these sets contains two folders for the respective classes. The modified dataset for training, validation, and testing is available here: https://www.dropbox.com/scl/fo/p703rw9d0qf39nnc6r0ph/APrpq4QP9LZYn3k7i3LIOeo?rlkey=pmiz9tu47m6egslsqkhhstn7a&st=61ibqtqb&dl=0.  The model was trained for 50 epochs, and after each epoch the model was evaluated on the validation set. The final classification report was generated on the test set for performance evaluation. TensorFlow Keras was used for building and training the model. The entire workflow of training is available in the notebook: **"model_trainings/VGG.ipynb"**
 
 ## References
 
