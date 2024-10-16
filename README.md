@@ -46,14 +46,16 @@ Looking at these plots, we can conclude that the self-supervised model trained o
 
 | Model                   | Class         | Precision | Recall | F1-Score | Accuracy |
 |---------------------    |---------------|-----------|--------|----------|----------|
-| Logistic regression     | Non-Sclerotic |    X.X    |  X.X   |    X.X   |   X.X    |
-|                         | Sclerotic     |    X.X    |  X.X   |    X.X   |          |
-| Support Vector Machine  | Non-Sclerotic |    X.X    |  X.X   |    X.X   |   X.X    |
-|                         | Sclerotic     |    X.X    |  X.X   |    X.X   |          |
-| Random Forest           | Non-Sclerotic |    X.X    |  X.X   |    X.X   |   X.X    |
-|                         | Sclerotic     |    X.X    |  X.X   |    X.X   |          |
-| Neural Network          | Non-Sclerotic |    X.X    |  X.X   |    X.X   |   X.X    |
-|                         | Sclerotic     |    X.X    |  X.X   |    X.X   |          |
+| Logistic regression     | Non-Sclerotic |   0.99    |  0.89  |   0.93   | 0.898    |
+|                         | Sclerotic     |   0.65    |  0.95  |   0.77   |          |
+| Support Vector Machine  | Non-Sclerotic |   0.98    |  0.89  |   0.93   | 0.896    |
+|                         | Sclerotic     |   0.66    |  0.90  |   0.76   |          |
+| Random Forest           | Non-Sclerotic |   0.91    |  0.98  |   0.95   | 0.907    |
+|                         | Sclerotic     |   0.88    |  0.57  |   0.69   |          |
+| Neural Network          | Non-Sclerotic |   0.99    |  0.94  |   0.96   |  0.942   |
+|                         | Sclerotic     |   0.79    |  0.94  |   0.86   |          |
+
+ Based on the performance results, we can conclude that both logistic regression and SVM performed well for the non-sclerotic class achieving high precision and recall. However, both models obtained poor precision for the sclerotic class. This indicates that these models may be useful for accurately classifying non-sclerotic, deploying them for diagnosing sclerotic cases could lead to incorrect treatment as patients with non-sclerotic will be incorrectly diagnosed. The results suggest that although these models can detect over 90% of sclerotic (high recall) they misclassify non-sclerotic as sclerotic. The random forest model also performed well for non-sclerotic, but using it for sclerotic could result in missing many sclerotic by misclassifying them as non-sclerotic. The neural network outperformed the other models in classifying sclerotic obtaining F1-score of 0.86 and high overall accuracy 0.942. This makes it the best model for deployment in scenarios where accurately distinguishing between sclerotic and non-sclerotic is critical. From a medical perspective the neural network is likely to be preferred in situations where the detection of all sclerotic cases is important. There is still room for improvement across all tehse models especially in handling the class imbalance which seems to affect the sclerotic classification. Future work could explore techniques such as data augmentation or synthetic data generation to further improve performance. This approach does seem to show promise for utilizing self-supervised learning in cases where there is an imbalance or insufficient data.
 
 
 ## References
