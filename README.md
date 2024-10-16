@@ -12,11 +12,11 @@ I read a few more papers in the medical field that implemented recent and advanc
 I also decided to implement the VAE approach by Pinter et al. [2] to see if morphological features extracted using this method could help differentiate the two classes. Apart from these two advanced models, one based on self-supervised learning and the other on VAE, I included a third simpler model VGG-16. VGG-16 is a well-known model that is widely used across different fields and has been very popular for image classification tasks.
 
 ###
-a) **Self-supervised Learning**
+a) Self-supervised Learning
 
-b) **VAE**
+b) VAE
 
-c) **VGG-16**
+c) VGG-16
 
 ## References
 
