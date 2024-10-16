@@ -40,6 +40,21 @@ After modifying the pre-trained model, the custom architecture was added for tra
 
 The cumulative explained variance for the 3-D plot was found to be 0.71, means that these three components capture 71% of the variance in the data. The additional third component helps to better separate the classes, as shown in the plot, but some overlap still remains. This suggests that more higher dimensions are required for better class separation boundaries. ![ Non-Sclerotic and Sclerotic in 3-D space](visualizations/pca_3d_embeddings.png)
 
+I also tried 3-D t-SNE clustering of these features as shown in ![ Non-Sclerotic and Sclerotic in 3-D space t-SNE](visualizations/t-sne_3d_embeddings.png)
+
+Looking at these plots, we can conclude that the self-supervised model trained on unlabeled images was able to extract useful features to separate the two classes. These visualizations can also be a form of model explainability showing how the embeddings separate the sclerotic and non-sclerotic glomeruli. When the 150-dimensional embeddings were used to train four different supervised models, their performance evaluated on the test data are shown in the table below:
+
+| Model                   | Class         | Precision | Recall | F1-Score | Accuracy |
+|---------------------    |---------------|-----------|--------|----------|----------|
+| Logistic regression     | Non-Sclerotic |    X.X    |  X.X   |    X.X   |   X.X    |
+|                         | Sclerotic     |    X.X    |  X.X   |    X.X   |          |
+| Support Vector Machine  | Non-Sclerotic |    X.X    |  X.X   |    X.X   |   X.X    |
+|                         | Sclerotic     |    X.X    |  X.X   |    X.X   |          |
+| Random Forest           | Non-Sclerotic |    X.X    |  X.X   |    X.X   |   X.X    |
+|                         | Sclerotic     |    X.X    |  X.X   |    X.X   |          |
+| Neural Network          | Non-Sclerotic |    X.X    |  X.X   |    X.X   |   X.X    |
+|                         | Sclerotic     |    X.X    |  X.X   |    X.X   |          |
+
 
 ## References
 
