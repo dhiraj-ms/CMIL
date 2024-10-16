@@ -35,6 +35,11 @@ After modifying the pre-trained model, the custom architecture was added for tra
 
 ## Results and Discussions
 
+###
+**a) Self-supervised Learning:** The embeddings from the labeled images of 317 sclerotic and 1,042 non-sclerotic glomeruli available at https://www.dropbox.com/scl/fo/rxctbnx27l8t9q669nigu/AOG0_kUsJgqzAF2oizzHyz0?rlkey=455wjotgqxzzggj1zgkdhazaa&st=wiopignx&dl=0 were reduced from 512 dimensions to 150 dimensions using PCA. The explained variance ratio was 0.9986841479224007 for sclerotic glomeruli and 0.9975686822899207 for non-sclerotic glomeruli. This high explained variance shows that even after reducing the dimensionality to nearly one-third of the original features, these 150 PCA components still captured most of the variance in the data. To investigate whether a separation between the two classes (sclerotic and non-sclerotic) could be observed visually, I performed PCA to reduce the data to 2 and 3 dimensions. I then plotted the embeddings using scatter plots for both cases. The 2-D plot is shown below: 
+![ Non-Sclerotic and Sclerotic in 2-D space](visualizations/pca_2d_embeddings.png) 
+
+
 ## References
 
 1. Pesce F, Albanese F, Mallardi D, Rossini M, Pasculli G, Suavo-Bulzis P, Granata A, Brunetti A, Cascarano GD, Bevilacqua V, Gesualdo L. Identification of glomerulosclerosis using IBM Watson and shallow neural networks. J Nephrol. 2022 May;35(4):1235-1242. doi: 10.1007/s40620-021-01200-0. Epub 2022 Jan 18. PMID: 35041197; PMCID: PMC8765108.
