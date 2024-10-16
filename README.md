@@ -57,7 +57,13 @@ Looking at these plots, we can conclude that the self-supervised model trained o
 
  Based on the performance results, we can conclude that both logistic regression and SVM performed well for the non-sclerotic class achieving high precision and recall. However, both models obtained poor precision for the sclerotic class. This indicates that these models may be useful for accurately classifying non-sclerotic, deploying them for diagnosing sclerotic cases could lead to incorrect treatment as patients with non-sclerotic will be incorrectly diagnosed. The results suggest that although these models can detect over 90% of sclerotic (high recall) they misclassify non-sclerotic as sclerotic. The random forest model also performed well for non-sclerotic, but using it for sclerotic could result in missing many sclerotic by misclassifying them as non-sclerotic. The neural network outperformed the other models in classifying sclerotic obtaining F1-score of 0.86 and high overall accuracy 0.942. This makes it the best model for deployment in scenarios where accurately distinguishing between sclerotic and non-sclerotic is critical. From a medical perspective the neural network is likely to be preferred in situations where the detection of all sclerotic cases is important. There is still room for improvement across all tehse models especially in handling the class imbalance which seems to affect the sclerotic classification. Future work could explore techniques such as more training samples for sclerotic or synthetic data generation to further improve performance. This approach does seem to show promise for utilizing self-supervised learning in cases where there is an imbalance or insufficient data.
 
-**b) VAE:**
+**b) VAE:** After the first phase of training for optimizing the hyperparameters, optimal parameters obatined were 'num_layers': 3, 'filters_0': 39, 'filters_1': 105, 'filters_2': 21, 'activation_function': 'relu'. With these values, when optimal model was obtained 
+
+GradCAM was then applied to visualize the important regions for 10 test images from each class, where the predicted label matched the ground truth. For non-sclerotic class, the visualization below shows which areas of the images contributed most to the model's predictions. ![ Non-Sclerotic GRADCAM Visualization](visualizations/merged_class_0.png)
+
+Similarly, GradCAM for sclerotic is shown in the plot below. ![Sclerotic GRADCAM Visualization](visualizations/merged_class_1.png)
+
+The regions with higher color intensity (moving from purple to yellow/red) indicate areas that the model finds important for its classification decisions. These regions likely contain key features that the model uses to distinguish between the two classes. These heatmaps provide insight into where the model is focusing, but these patterns alone may not be sufficient to fully understand the biological context without medical experts.
 
 ## References
 
