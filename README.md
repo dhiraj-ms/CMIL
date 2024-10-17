@@ -83,6 +83,25 @@ The regions with higher color intensity (moving from purple to yellow/red) indic
 
 Among the three models implemented, self-supervised, VAE, and VGG-16, VGG-16 model outperformed the others in terms of overall accuracy. It also gives a good balance between precision and recall for both non-sclerotic and sclerotic. This makes VGG-16 the most reliable model for deployment. In contrast, the other models showed limitations in specific scenarios. The self-supervised neural network have comparatively low precision (0.79) in the sclerotic class, misclassifying non-sclerotic as sclerotic which could lead to diagnosis of non-sclerotic patients. VGG-16 performed well for this task due to its use of pre-trained ImageNet weights on millions of images and these features work well to classify our two classes. VGG-16 model will be an efficient and reliable option for deployment especially in scenarios where simplicity and computational cost are important.
 
+## Running the code
+
+To run the code of this project, you have two options: cloning the repository using Git or downloading the repository as a ZIP file. Follow the steps below for either method:
+
+### Option 1: Clone the Repository Using Git
+
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/dhiraj-ms/CMIL.git
+
+### Option 2: Download the Repository as ZIP
+ 1. Go to https://github.com/dhiraj-ms/CMIL in your web browser
+ 
+ 2. Click the green Code button.
+
+ 3. Select Download ZIP.
+ 
+ 4. Extract the ZIP file to a directory on your local machine.
+
 
 ## References
 
