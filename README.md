@@ -112,8 +112,8 @@ To run the code of this project, you have two options: cloning the repository us
   cd CMIL
 - Then, run the following command to install the dependencies required for the project. The environment will be named cmil:
 
-```bash
- conda env create -f environment.yml
+ ```bash
+  conda env create -f environment.yml
 
 - After the installation is complete, activate the environment:
 
