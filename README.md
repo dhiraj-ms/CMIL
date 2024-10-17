@@ -114,17 +114,14 @@ To run the code of this project, you have two options: cloning the repository us
 
  ```bash
   conda env create -f environment.yml
-
 - After the installation is complete, activate the environment:
 
 ```bash
 conda activate cmil
-
 - Now, open Jupyter Lab in this environment:
 
 ```bash
 jupyter lab
-
 ### 2. Download Model Weights
 
  - Download all the model weights and folders from the link mentioned in the Materials and Methods and Results sections of the README.
