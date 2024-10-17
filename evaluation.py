@@ -10,7 +10,7 @@ image_size = (224, 224)
 batch_size = 32
 
 def evaluate_model(image_folder):
-    model = load_model('vgg16_model.h5')
+    model = load_model('vgg16_model.h5') #path of model
 
     image_files = [f for f in os.listdir(image_folder) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
 
