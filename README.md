@@ -120,7 +120,7 @@ To run the code of this project, you have two options: cloning the repository us
 
 3. Ensure that the dataset paths for each model training are correctly arranged. You will find the required paths specified within each notebook.
 
-### 4. Running Inference Notebooks
+### Running Inference Notebooks
 
 1. Inside the inference folder, you will find notebooks for running inference on test folder using the saved models.
 
