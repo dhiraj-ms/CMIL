@@ -130,7 +130,8 @@ To run the code of this project, you have two options: cloning the repository us
 
 ## Running the Evaluation on a Folder of Images
 
-- Keep `vgg16_model.h5` in the same folder as the project in the `cmil` environment.
+- The best model among all three models, which is vgg16, is considered for deployment.
+- Keep `vgg16_model.h5` in the same folder as the project in the cmil environment.
 - Place the folder of images in the project folder.
 - Run the following command:
 
