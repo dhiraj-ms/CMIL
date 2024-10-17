@@ -102,6 +102,53 @@ To run the code of this project, you have two options: cloning the repository us
  
  4. Extract the ZIP file to a directory on your local machine.
 
+### Running Training and Inference Notebooks
+
+#### 1. Set Up the Environment
+
+- First, open Anaconda Prompt and navigate to the project folder you cloned using the `cd` command:
+  
+  ```bash
+  cd CMIL
+- Then, run the following command to install the dependencies required for the project. The environment will be named cmil:
+
+```bash
+ conda env create -f environment.yml
+
+- After the installation is complete, activate the environment:
+
+```bash
+conda activate cmil
+
+- Now, open Jupyter Lab in this environment:
+
+```bash
+jupyter lab
+
+### 2. Download Model Weights
+
+ - Download all the model weights and folders from the link mentioned in the Materials and Methods and Results sections of the README.
+
+-  Store the downloaded files in the appropriate location within the project folder.
+
+### 3. Running Training Notebooks
+
+- The notebooks for model training are available in the model_training_workflow folder.
+
+- Open each notebook, and running cells will be self-explanatory.
+
+-  Ensure that the dataset paths for each model training are correctly arranged. You will find the required paths specified within each notebook.
+
+### 4. Running Inference Notebooks
+
+- Inside the inference folder, you will find notebooks for running inference on test folder using the saved models.
+
+- If you want to run inference on just one folder of images using VAE_inference.ipynb, modify the image_processing function to remove the splitting part, and the rest should work fine.
+
+- The other two inference notebooks are used for running predictions on a single folder or the entire dataset.
+
+
+
 
 ## References
 
