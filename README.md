@@ -128,6 +128,16 @@ To run the code of this project, you have two options: cloning the repository us
 
 3. The other two inference notebooks are used for running predictions on a single folder or the entire dataset.
 
+## Running the Evaluation on a Folder of Images
+
+- Keep `vgg16_model.h5` in the same folder as the project in the `cmil` environment.
+- Place the folder of images in the project folder.
+- Run the following command:
+
+   ```bash
+   python evaluation.py "image_folder_name"
+
+- The predicted output will be evaluation.csv in the directory.
 
 
 
